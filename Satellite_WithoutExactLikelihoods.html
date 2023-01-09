@@ -1,0 +1,320 @@
+<!DOCTYPE HTML>
+<!--
+Editorial by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+
+<html>
+<head>
+<title>BayesComp-ISBA: Bayesian computing without exact likelihoods</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="assets/css/main.css" />
+<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper">
+<!-- Main -->
+<div id="main">
+<div class="inner">
+
+
+<!-- Header -->
+<header id="header">
+<a href="index.html" class="logo"><strong><h2> Bayesian computing without exact likelihoods<br>
+Levi, Finland, 12-14 March 2023</h2> 
+</strong></a>
+</header>
+
+<!--### MEASURING QUALITY OF MCMC OUTPUT###############################################################-->
+<!-- Section -->
+<section>
+
+<span class="image right"><img src="images/MarchNearLevi.jpg" alt="" /></span>
+
+<p>
+This <a href="https://bayescomp2023.com/">Bayes Comp 2023</a> Satellite Workshop is about methods, theory and applications related to Bayesian computation in the absence of exact likelihoods.
+</p>
+
+
+<section>
+
+<h3> Programme </h3>
+<p>
+As per the programme on <a href="https://bayescomp2023.com/">the Bayes Comp 2023 website</a>, the satellite will start on the evening of 12 March. This evening session will include an introduction to approximate Bayesian methods. The remaining talks will begin at 9:20am on Monday 13th March. The sessions are organised as follows:
+</p>
+
+
+<ul>
+<li><b>Session I</b>: Carlo Albert, Yannick Schälte, Sebastian Schmön</li>
+<li><b>Session II</b>: David Frazier, Chris Holmes, Jack Jewson</li>
+<li><b>Session III</b>: Grégoire Clarté, Florence Forbes, Ulpu Rhemes</li>
+<li><b>Session IV</b>: Imke Botha, Geoff Nicholls, Chaya Weerasinghe</li>
+<li><b>Session V</b>: Trevor Campbell, Sam Duffield, Joshua Bon</li>
+<li><b>Session VI</b>: Ricardo Corradin, Tomasso Rigon, Judith Rousseau</li>
+<li><b>Session VII</b>: Johanna Tamminen, Massi Tamborino, Quang Vu</li>
+<li><b>Session VIII</b>: Aki Vehtari, Lorenzo Pacchiardi</li>
+</ul>
+
+<h3> Abstracts </h3>
+
+<ul>
+<li><b>Carlo Albert</b>, Eawag, Switzerland. <br><br>
+
+<i>Title</i>: A thermodynamic perspective on ABC.<br><br>
+
+<i>Abstract</i>: Accuracy and efficiency of ABC hinge on the choice of suitable summary statistics and the proper tuning of the tolerance between simulated and observed statistics. Both problems have a thermodynamic interpretation, which has inspired efficient algorithms for their solution. In order for ABC to be accurate and efficient, summary statistics need to be near sufficient and well concentrated, respectively. That is to say, they need to encode nearly all parameter-related information while cancelling most of the noise of the model outputs. Thus, they can be interpreted as thermodynamic state variables, for stochastic models. I will present a Machine Learning approach that implements these requirements, and is able to find suitable statistics even in situations where parameter estimators are insufficient for Bayesian inference. If we interpret the distance between simulated and observed summary statistics as an energy, the tolerance can be interpreted as a temperature. This interpretation has inspired an adaptive tuning algorithm for the tolerance, which gradually lowers the temperature (akin to simulated annealing) such that the entropy production (wasted computation) is minimized.
+<br><br></li>
+
+
+
+<li><b>Imke Botha</b>, QUT, Australia. <br><br>
+
+<i>Title</i>: Component-wise iterative ensemble Kalman inversion for static Bayesian models with unknown measurement error covariance.<br><br>
+
+<i>Abstract</i>: The ensemble Kalman filter (EnKF) is a Monte Carlo approximation of the Kalman filter for high dimensional linear Gaussian state space models. EnKF methods have also been developed for parameter inference of static Bayesian models with a Gaussian likelihood, in a way that is analogous to likelihood tempering sequential Monte Carlo (SMC). These methods are commonly referred to as ensemble Kalman inversion (EKI). Unlike SMC, the inference from EKI is only asymptotically unbiased if the likelihood is linear Gaussian and the priors are Gaussian. However, EKI is significantly faster to run. Currently, a large limitation of EKI methods is that the covariance of the measurement error is assumed to be fully known. We develop a new method, which we call component-wise iterative ensemble Kalman inversion (CW-IEKI), that allows elements of the covariance matrix to be inferred alongside the model parameters at negligible extra cost. 
+This is joint work with Chris Drovandi, Matthew Adams, Dan Tran and Frederick Bennett.
+<br><br></li>
+
+<li><b>Trevor Campbell</b>, UBC, Canada. <br><br>
+
+<i>Title</i>: Ergodic variational flows.<br><br>
+
+<i>Abstract</i>: This work presents a new class of variational family -- ergodic variational flows -- that not only enables tractable i.i.d. sampling and density evaluation, but also comes with MCMC-like convergence guarantees. Ergodic variational flows consist of a mixture of repeated applications of a measure-preserving and ergodic map to an initial reference distribution. We provide mild conditions under which the variational distribution converges weakly and in total variation to the target as the number of steps in the flow increases; this convergence holds regardless of the value of variational parameters, although different parameter values may result in faster or slower convergence. Further, we develop a particular instantiation of the general family using Hamiltonian dynamics on a sparsified approximate log-likelihood function, combined with deterministic momentum refreshment. Simulated and real data experiments provide an empirical verification of the convergence theory and demonstrate that samples produced by the method are of comparable quality to a state-of-the-art MCMC method.
+<br><br></li>
+
+<li><b>Grégoire Clarté</b>, University of Helsinki, Finland.<br><br>
+
+<i>Title</i>: SVBMC: Fast post-processing bayesian inference with noisy evaluations of the likelihood.<br><br>
+
+<i>Abstract</i>: In many cases, the exact likelihood is unavailable, and can only be accessed through a noisy and expensive process -- for example, in Plasma Physics. Furthermore, Bayesian inference often comes in at a second moment, for example after running an optimization algorithm to find a MAP estimate. To tackle both these issues, we introduce Sparse Variational Bayesian Monte Carlo (SVBMC), a method for fast ``post-process'' Bayesian inference for models with black-box and noisy likelihoods. SVBMC reuses all existing target density evaluations -- for example, from previous optimizations or partial Markov Chain Monte Carlo runs -- to build a sparse Gaussian process (GP) surrogate model of the log posterior density. Uncertain regions of the surrogate are then refined via active learning as needed. Our work builds on the Variational Bayesian Monte Carlo (VBMC) framework for sample-efficient inference, with several novel contributions. First, we make VBMC scalable to a large number of pre-existing evaluations via sparse GP regression, deriving novel Bayesian quadrature formulae and acquisition functions for active learning with sparse GPs. Second, we introduce noise shaping, a general technique to induce the sparse GP approximation to focus on high posterior density regions. Third, we prove theoretical results in support of the SVBMC refinement procedure. We validate our method on a variety of challenging synthetic scenarios and real-world applications. We find that SVBMC consistently builds good posterior approximations by post-processing of existing model evaluations from different sources, often requiring only a small number of additional density evaluations.
+<br><br></li>
+
+<li><b>Riccardo Corradin</b>, University of Nottingham, United Kingdom. <br><br>
+
+<i>Title</i>: Model-based clustering with intractable distributions.<br><br>
+
+<i>Abstract</i>: Model-based clustering represents one of the fundamental procedures in a statistician's toolbox. Within the model-based clustering framework, we consider the case where the kernel of nonparametric mixture models is available only up to an intractable normalizing constant, and most of the commonly used Markov chain Monte Carlo methods fail to provide posterior inference. To overcome this problem, we propose an approximate Bayesian computational strategy, whereby we approximate the posterior to avoid the intractability of the kernel. By exploiting the structure of the nonparametric prior, our proposal combines the use of predictive distributions as proposal distributions with transport maps to obtain an efficient and flexible sampling strategy. Further, the specification of our proposal can be simplified by introducing an adaptive scheme on the degree of approximation of the posterior distribution. Empirical evidence from simulation studies shows that our proposal outperforms its main competitors in terms of computational times while preserving comparable accuracy of the estimates.
+<br><br></li>
+
+<li><b>Joshua Bon</b>, QUT, Australia.<br><br>
+
+<i>Title</i>: Bayesian score calibration for approximate models.<br><br>
+
+<i>Abstract</i>: Scientists continue to develop increasingly complex mechanistic models to reflect their knowledge more realistically. Statistical inference using these models can be highly challenging, since the corresponding likelihood function is often intractable and model simulation may be computationally burdensome.  Fortunately, in many of these situations, it is possible to adopt a surrogate model or approximate likelihood function.  It may be convenient to base Bayesian inference directly on the surrogate, but this can result in bias and poor uncertainty quantification.  Here we propose a new method for adjusting approximate posterior samples to reduce bias and produce more accurate uncertainty quantification.  We do this by optimising a transform of the approximate posterior that maximises a scoring rule.  Our approach requires only a (fixed) small number of complex model simulations and is numerically stable.  We demonstrate good performance of the new method on several examples of increasing complexity.
+<br><br></li>
+
+<li><b>Sam Duffield</b>, Quantinuum, United Kingdom.<br><br>
+
+
+<i>Title</i>: Bayesian Learning of Parameterised Quantum Circuits.<br><br>
+
+<i>Abstract</i>: Currently available quantum computers suffer from constraints including hardware noise and a limited number of qubits. As such, variational quantum algorithms that utilise a classical optimiser in order to train a parameterised quantum circuit have drawn significant attention for near-term practical applications of quantum technology. In this work, we take a probabilistic point of view and reformulate the classical optimisation as an approximation of a Bayesian posterior. The posterior is induced by combining the cost function to be minimised with a prior distribution over the parameters of the quantum circuit. We describe a dimension reduction strategy based on a maximum a posteriori point estimate with a Laplace prior. Experiments on the Quantinuum H1-2 computer show that the resulting circuits are faster to execute and less noisy than the circuits trained without the dimension reduction strategy. We subsequently describe a posterior sampling strategy based on stochastic gradient Langevin dynamics. Numerical simulations on three different problems show that the strategy is capable of generating samples from the full posterior and avoiding local optima.
+<br><br></li>
+
+<li><b>Florence Forbes</b>, INRIA Grenoble, France.<br><br>
+
+<i>Title</i>: Automatic learning of functional summary statistics for approximate Bayesian computation.<br><br>
+
+<i>Abstract</i>: Choosing informative summary statistics is a key and challenging task
+for successful inference via ABC algorithms. An important line of
+research towards automatic learning of summary statistics has started in
+the seminal paper of Fearnhead and Prangle [2012]. Their semi-automatic
+ABC approach targets approximations of the posterior mean as an optimal
+summary statistic under a quadratic loss. In this work, we propose to go
+beyond summary statistics as point estimators and consider functional
+summary statistics. Approximations of the full posterior distributions
+are used as such functional summaries.  The parametric framework used to
+provide these approximations is a family of Gaussian mixtures. The whole
+procedure can be seen as an extension of the semi-automatic ABC
+framework and can also be used as an alternative to sample-based ABC
+approaches. The resulting ABC quasi-posterior distribution is shown to
+converge to the true one, under standard conditions. Performance is
+illustrated on both synthetic and real data sets, where it is shown that
+our approach is particularly useful when the posterior is multimodal.
+This is joint work with Hien Nguyen, TrungTin Nguyen and Julyan Arbel.
+<br><br></li>
+
+<li><b>David Frazier</b>, Monash University, Australia.<br><br>
+
+<i>Title</i>: Simulation-based Bayesian inference with general loss functions.<br><br>
+
+<i>Abstract</i>: Simulation-based Bayesian methods, such as approximate Bayesian computation (ABC), are a useful class of algorithms that can be used to conduct inference even in situations where the underlying model is intractable. The ease with which these methods can be implemented has allowed them to become a prominent tool in the armoury of the practising Bayesian statistician. While such methods display certain optimality properties when the assumed model is correctly specified, it has recently been shown that the performance of these methods deteriorates dramatically when the assumed model is misspecified. We demonstrate that a particular combination of generalized and simulation-based Bayesian methods, which we refer to as generalized ABC (G-ABC), produces posteriors that are robust to model misspecification, and which also perform well when the model is correctly specified. Unlike existing ABC methods, the G-ABC posterior is asymptotically Gaussian, and has well-behaved posterior moments, regardless of whether the model is correctly or incorrectly specified. We theoretically compare the G-ABC posterior against existing ABC approaches, and empirically compare the methods across several examples. Not only does G-ABC display more regular large sample behaviour than ABC, but it outperforms ABC methods in small samples as well.
+<br><br></li>
+
+<li><b>Chris Holmes</b>, University of Oxford, United Kingdom.<br><br>
+
+<i>Title</i>: Causal predictive inference without counterfactuals using target trial emulation.<br><br>
+
+<i>Abstract</i>: We show how simulation of hypothetical population-scale randomized controlled trials (RCTs) can be used for causal inference from observational data. Our approach uses data from an observational study to construct a joint predictive generative model for unobserved, hypothetical, data arising from a large-scale RCT matched to the observational study. Having generated synthetic data from a large-scale target RCT, we can pick off any scientific causal effect of interest from the synthetic outcomes. Repeated simulation of the hypothetical RCT provides samples of causal effect estimates from a well characterised Bayesian posterior conditional on the observational data. The usual assumptions for causal inference map to interpretable conditions on transportability of predictive models across populations and conditions without the need to introduce counterfactuals.
+<br><br></li>
+
+<li><b>Jack Jewson</b>, U Pompeu Fabra, Spain.<br><br>
+
+<i>Title</i>: On the Stability of General Bayesian Inference.<br><br>
+
+<i>Abstract</i>: We study the stability of posterior predictive inferences to the specification of the likelihood model and perturbations of the data generating process. In modern big data analyses, the decision-maker may elicit useful broad structural judgements but a level of interpolation is required to arrive at a likelihood model. One model, often a computationally convenient canonical form, is chosen, when many alternatives would have been equally consistent with the elicited judgements. Equally, observational datasets often contain unforeseen heterogeneities and recording errors. Acknowledging such imprecisions, a faithful Bayesian analysis should be stable across reasonable equivalence classes for these inputs. We show that traditional Bayesian updating provides stability across a very strict class of likelihood models and DGPs, while a generalised Bayesian alternative using the beta-divergence loss function is shown to be stable across practical and interpretable neighbourhoods. These stability results provide a compelling justification for using generalised Bayes to facilitate inference under simplified canonical models. We illustrate this in linear regression, binary classification, and mixture modelling examples.
+<br><br></li>
+
+<li><b>Geoff Nicholls</b>, University of Oxford, United Kingdom.<br><br>
+
+<i>Title</i>: Semi Modular Inference: motivation and computation.<br><br>
+
+<i>Abstract</i>: Consider a parametric observation model for a data set $Y$ (with parameters $\theta$ and $\phi$) and another for data $Z$ (with parameter $\phi$). When the models have parameters in common (like $\phi$) we can bring the two modules $(Y,\theta,\phi)$ and $(Z,\phi)$ together to form a multi-modular model with posterior $\pi(\phi,\theta|Y,Z)$. In this belief update "everything informs everything else". However the more modules we combine in this way, the more likely it is that some of the observations models or priors are misspecified. <br><br>
+
+Suppose we know the $(Y,\theta,\phi)$ module is misspecified. Cut models are a form of Bayesian Multiple Imputation (BMI) proposed to treat misspecification. We ``impute'' $\phi$ using the good $(Z,\phi)$ module and then ``analyse'' $\theta$ given the imputed distribution of $\phi$. Each step is Bayesian, but the whole is not. Semi-Modular Inference (SMI) is similar, but uses a power posterior to down-weight, rather than cut, the influence of the $(Y,\theta,\phi)$ module on the imputation of $\phi$. SMI has a control parameter $\eta$, and defines a sequence of candidate belief updates interpolating between Cut models and Bayesian inference. <br><br>
+
+In this talk we will comment how the setup must change depending on whether the misspecification is in the prior or observation model. We will comment on how $\eta$ may be chosen, using the ELPD, and give some computational tools for approximating the family of SMI distributions indexed by $\eta$. Variational Inference with normalising flows is particularly convenient. We show how to fit the entire family using a single flow. The control parameter enters the flow through the conditioner and indexes a ``Variational Meta-Posterior'' (VMP). This gives the variational approximation at each $\eta$. It is rather like learning the variational parameters as functions of $\eta$. This VMP-framework allows to us choose $\eta$ maximising the ELPD in a single straight-through training procedure. This is needed for problems with multiple cuts, each with its own control parameter $\eta$.
+<br><br></li>
+
+<li><b>Lorenzo Pacchiardi</b>, University of Oxford, United Kingdom.<br><br>
+
+<i>Title</i>: TBA.<br><br>
+
+<i>Abstract</i>: TBA.
+<br><br></li>
+
+<li><b>Sonia Petrone</b>, Bocconi University, Italy.<br><br>
+
+<i>Title</i>: TBA.<br><br>
+
+<i>Abstract</i>: TBA.
+<br><br></li>
+
+<li><b>Ulpu Remes</b>, University of Helsinki, Finland.<br><br>
+
+<i>Title</i>: Likelihood-free parameter estimation and model choice with the Jensen–Shannon divergence.<br><br>
+
+<i>Abstract</i>: The usual aim in likelihood-free inference for simulator-based statistical models is to use a limited observation set to estimate an approximate posterior distribution for the unknown model parameters. The approximate posterior can be estimated, for example, based on direct comparisons between observed and simulated data. Here we consider the same principle in the frequentist large-sample setting. We focus on simulator-based models that produce categorical observation data, and we use the expected Jensen–Shannon divergence (JSD) between observed and simulated data as a model fit measure in likelihood-free parameter estimation and model comparison. JSD has attractive theoretical properties in this application. For example, we can show that the minimum JSD and maximum likelihood estimates are asymptotically equivalent for observations that follow a multinomial distribution. We also discuss ideas for likelihood-free confidence set estimation and derive a new information-theoretic criterion for likelihood-free model choice. The approaches are tested in simulation experiments. [Joint work with Jukka Corander and Timo Koski]
+<br><br></li>
+
+<li><b>Tomasso Rigon</b>, University of Milano-Bicocca, Italy.<br><br>
+
+<i>Title</i>: Statistical modelling within the generalized Bayes paradigm.<br><br>
+
+<i>Abstract</i>: Loss-based clustering methods, such as k-means and its variants, are standard tools for finding groups in data. However, the lack of quantification of uncertainty in the estimated clusters is a disadvantage.  Model-based clustering based on mixture models provides an alternative, but such methods face computational problems and large sensitivity to the choice of kernel.  This article proposes a generalized Bayes framework that bridges between these paradigms through the use of Gibbs posteriors.  In conducting Bayesian updating, the log-likelihood is replaced by a loss function for clustering, leading to a rich family of clustering methods.  The Gibbs posterior represents a coherent updating of Bayesian beliefs without needing to specify a likelihood for the data, and can be used for characterizing uncertainty in clustering.  We consider losses based on Bregman divergence and pairwise similarities, and develop efficient deterministic algorithms for point estimation along with sampling algorithms for uncertainty quantification.  Several existing clustering algorithms, including k-means, can be interpreted as generalized Bayes estimators under our framework, and hence we provide a method of uncertainty quantification for these approaches; for example, allowing calculation of the probability a data point is well clustered.
+<br><br></li>
+
+<li><b>Judith Rousseau</b>, University of Oxford, United Kingdom.<br><br>
+
+<i>Title</i>: TBA.<br><br>
+
+<i>Abstract</i>: TBA.
+<br><br></li>
+
+<li><b>Yannik Schälte</b>, University of Bonn, Germany.<br><br>
+
+<i>Title</i>: Accounting for data informativeness in likelihood-free inference using machine learning models.<br><br>
+
+<i>Abstract</i>: Calibrating models on high-dimensional data can be challenging and inefficient when not all data points are equally informative of parameters, or e.g. only subject to background noise. This is especially relevant in likelihood-free inference methods, such as approximate Bayesian computation (ABC), which rely on the comparison of simulated and observed data via distance metrics, and are often the tool of choice to analyze complex spatial agent-based models. In this talk, we discuss how we can learn and use regression models to project data onto low-dimensional summary statistics or define weights accounting for informativeness. We demonstrate substantial improvements in robustness, efficiency, and accuracy over, as well as outline conceptual deficiencies of, established approaches.
+<br><br></li>
+
+<li><b>Sebastian Schmön</b>, University of Durham, United Kingdom.<br><br>
+
+<i>Title</i>: Bayesian inference for intractable simulators: opportunities and pitfalls in the era of machine learning.<br><br>
+
+<i>Abstract</i>: This is a journey through recent developments in so-called likelihood-free Bayesian inference. I will discuss how neural networks have revolutionised the field, their promises and pitfalls. We will see that there are considerable problems when models are mis-specified and discuss potential remedies using model criticism. Last but not least, we explore how a novel, more general approach to Bayesian inference allows us to incorporate inductive biases into the inference procedure directly.
+<br><br></li>
+
+<li><b>Massimiliano Tamborrino</b>, University of Warwick, United Kingdom.<br><br>
+
+<i>Title</i>: TBA.<br><br>
+
+<i>Abstract</i>: TBA.
+<br><br></li>
+
+<li><b>Johanna Tamminen</b>, Finnish Meteorological Institute, Finland.<br><br>
+
+<i>Title</i>: Uncertainty quantification in satellite remote sensing.<br><br>
+
+<i>Abstract</i>: Satellite remote sensing has become a crucial part of our environmental monitoring and climate research. In this presentation we discuss the needs, methods and applications of uncertainty quantification as part of the data processing of satellite remote sensing. Specifically, we discuss Bayesian approaches as well as the role of reference observations. In this presentation we highlight a few timely and societally relevant research topics related to carbon cycle, greenhouse gases and air quality. We discuss both present and upcoming satellite instruments and consider also emerging needs for uncertainty quantification.
+<br><br></li>
+
+<li><b>Aki Vehtari</b>, .<br><br>
+
+<i>Title</i>: .<br><br>
+
+<i>Abstract</i>: 
+<br><br></li>
+
+<li><b>Quan Vu</b>, .<br><br>
+
+<i>Title</i>: TBA.<br><br>
+
+<i>Abstract</i>: TBA.
+<br><br></li>
+
+<li><b>Chaya Weerasinghe</b>, Monash University, Australia.<br><br>
+
+<i>Title</i>: Approximate Bayesian Forecasting in Misspecified State Space Models.<br><br>
+
+<i>Abstract</i>: We propose a new approach to performing Bayesian forecasting in state space models that yields accurate predictions without relying on correct model specification. This new approach constructs a predictive distribution using approximate Bayesian computation (ABC). The summary statistics that underpin ABC are produced via a criterion function that rewards a user-specified measure of predictive accuracy and, in so doing, produces a predictive distribution that performs well in that measure. The method is illustrated numerically using simulated data, demonstrating its effectiveness, including in comparison with exact MCMC-based predictions. In particular, coherent predictions are in evidence, whereby the ABC predictive constructed via the use of a particular scoring rule, is shown to perform the best out of sample according to that rule, and better than the exact (but misspecified) Bayesian predictive.  (joint work with Loaiza_Maya, Martin and Frazier)
+<br><br></li>
+
+
+
+</ul>
+
+<h3> Registration </h3>
+<p> Registration is through the<a href="https://bayescomp2023.com/"> Bayes Comp 2023 website</a>.</p>
+
+
+<h3> Organisers</h3>
+<p> The event is being organised by Antonietta Mira, Christian Robert, Heikki Haario, Leah South, Chris Drovandi and Umberto Picchini. We can be contacted at Christian's gmail account bayesianstatistics or at l1.south (at) qut.edu.au.
+</p>
+
+
+
+</section>
+</div>
+</div>
+
+<!--### SIDE BAR #####################################################################-->
+<!-- Sidebar -->
+<div id="sidebar">
+<div class="inner">
+
+
+<!-- Menu -->
+<nav id="menu">
+<header class="major">
+<h2>Menu</h2>
+</header>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="resources.html">Resources</a></li>
+<li><a href="bylaws.html">Bylaws</a></li>
+<li><a href="officers.html">Board</a></li>
+</ul>
+</nav>
+
+<!-- Section -->
+<section>
+<header class="major">
+<h2>Get in Touch</h2>
+</header>
+<ul class="contact">
+<li class="fa-github"><a href="https://github.com/BayesComp-ISBA">GitHub Page</a></li>
+</ul>
+</section>
+
+ <!-- Footer -->
+</div>
+</div>
+</div>
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+</body>
+</html>
+
