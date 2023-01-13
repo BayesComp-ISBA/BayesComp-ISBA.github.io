@@ -36,7 +36,7 @@ Levi, Finland, 12-14 March 2023</h2>
 <!-- Section -->
 <section>
 
-<span class="image right"><img src="images/MarchNearLevi.jpg" alt="" /></span>
+<span class="image right"><img src="images/MarchNearLevi.JPG" alt="Snowy photo from the area in March 2022" /></span>
 
 <p>
 This <a href="https://bayescomp2023.com/">Bayes Comp 2023</a> Satellite Workshop is about methods, theory and applications for Bayesian inference in the absence of exact likelihoods.
@@ -46,29 +46,46 @@ This <a href="https://bayescomp2023.com/">Bayes Comp 2023</a> Satellite Workshop
 <section>
 
 <h3> Programme </h3>
-<p>
-As per the programme on <a href="https://bayescomp2023.com/">the Bayes Comp 2023 website</a>, the satellite will start on the evening of 12 March. This evening session will include an introduction to approximate Bayesian methods. The remaining talks will begin at 9:20am on Monday 13th March. 
+<p>The tentative programme for this workshop is below. This programme is subject to change.
 </p>
 
-<p>The sessions are organised as follows:
-</p>
-
-
+Sunday 12 March
 <ul>
-<li><b>Session I</b>: Carlo Albert, Yannick Schälte, Sebastian Schmön</li>
-<li><b>Session II</b>: David Frazier, Chris Holmes, Jack Jewson</li>
-<li><b>Session III</b>: Grégoire Clarté, Florence Forbes, Ulpu Remes</li>
-<li><b>Session IV</b>: Imke Botha, Geoff Nicholls, Chaya Weerasinghe</li>
-<li><b>Session V</b>: Trevor Campbell, Sam Duffield, Joshua Bon</li>
-<li><b>Session VI</b>: Riccardo Corradin, Tomasso Rigon, Judith Rousseau</li>
-<li><b>Session VII</b>: Johanna Tamminen, Massimiliano Tamborrino, Quan Vu</li>
-<li><b>Session VIII</b>: Aki Vehtari, Lorenzo Pacchiardi</li>
+<li>18.00-20.00 <b>Satellite ice-breaker</b></li>
+<li>20.00-22.00 <b>Satellite opening</b>: Keynote presentation by Sonia Petrone</li>
 </ul>
 
+Monday 13 March
+<ul>
+<li>9.20-10.10 <b>Session I</b>: Carlo Albert, Yannick Schälte, Sebastian Schmön</li>
+<li>10.10-10.30 <b>Coffee</b></li>
+<li>10.30-12.00 <b>Session II</b>: David Frazier, Chris Holmes, Jack Jewson</li>
+<li>12.00-15.00 <b>Lunch & Ski</b></li>
+<li>15.00-16.30 <b>Session III</b>: Johanna Tamminen, Massimiliano Tamborrino, Quan Vu</li>
+<li>17.00-18.30 <b>Session IV</b>: Imke Botha, Geoff Nicholls, Chaya Weerasinghe</li>
+</ul>
 
-<h3> Registration </h3>
-<p> Registration is through the<a href="https://bayescomp2023.com/"> Bayes Comp 2023 website</a>.</p>
+Tuesday 14 March
+<ul>
+<li>9.20-10.10 <b>Session V</b>: Aki Vehtari, Lorenzo Pacchiardi</li>
+<li>10.10-10.30 <b>Coffee</b></li>
+<li>10.30-12.00 <b>Session VI</b>: Riccardo Corradin, Tomasso Rigon, Judith Rousseau</li>
+<li>12.00-15.00 <b>Lunch & Ski</b></li>
+<li>15.00-16.30 <b>Session VII</b>: Grégoire Clarté, Florence Forbes, Ulpu Remes</li>
+<li>16.30-18.00 <b>Session VIII</b>: Trevor Campbell, Sam Duffield, Joshua Bon</li>
+</ul>
 
+<h3> Registration and Practical Advice </h3>
+
+<p> Registration is through the<a href="https://bayescomp2023.com/"> Bayes Comp 2023 website</a>. Practical advice regarding travel, accommodation and childcare are also available through the main website.</p>
+
+<p>
+The satellite workshop will take place in the same hotel as the main conference: <a href="https://levipanorama.fi/en/__;!!NVzLfOphnbDXSw!AeOZ7o6HtRLwI5Ot5vVqvp9Gxm-ZEWHKmZSo6QHcr3RSPiK8r4ExOXJMvCNay7iXqCbFwIFgKQdDIPib6WbqjSv3fQ$">Hotel Levi Panorama</a>. 
+</p>
+
+<p>
+Bayes Comp follows the <a href="">ISBA code of conduct</a> on ethical professional practice, equal opportunity, and anti-harassment. For any irregularity, please contact <a href="mailto:bayescomp2023@gmail.com">bayescomp2023@gmail.com</a>.
+</p>
 
 <h3> Organisers</h3>
 <p> The event is being organised by Antonietta Mira, Christian Robert, Heikki Haario, Leah South, Chris Drovandi and Umberto Picchini. We can be contacted at Christian's gmail account bayesianstatistics or at l1.south (at) qut.edu.au.
@@ -188,9 +205,9 @@ In this talk we will comment how the setup must change depending on whether the 
 
 <li><b>Lorenzo Pacchiardi</b>, University of Oxford, United Kingdom.<br><br>
 
-<i>Title</i>: TBA.<br><br>
+<i>Title</i>: Likelihood-Free Inference with Generative Neural Networks via Scoring Rule Minimization.<br><br>
 
-<i>Abstract</i>: TBA.
+<i>Abstract</i>: Bayesian Likelihood-Free Inference methods yield posterior approximations for simulator models with intractable likelihood. Some recent techniques employed normalizing flows, which transform samples from a base distribution via an invertible map parametrized by neural networks. Thanks to invertibility, the probability density of the transformed samples is available, so that the normalizing flow can be trained via maximum likelihood on simulated parameter-observation pairs. In contrast, Ramesh et al. (2022) approximated the posterior with generative networks, which do not impose invertibility and are thus more flexible and scale to high-dimensional structured data. However, generative networks only allow sampling from the parametrized distribution; hence, Ramesh et al. (2022) recurred to adversarial training, where the generative network plays a min-max game against a “discriminator” network. This procedure is unstable and can lead to overconfident distributions, which is detrimental to Bayesian inference. Here, we train generative networks to approximate the posterior by Scoring Rule minimization, an overlooked adversarial-free method enabling smooth training and better uncertainty quantification. In simulation studies, this approach yields better performance with a shorter training time than the adversarial framework.
 <br><br></li>
 
 <li><b>Sonia Petrone</b>, Bocconi University, Italy.<br><br>
