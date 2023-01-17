@@ -67,11 +67,11 @@ Monday 13 March
 
 Tuesday 14 March
 <ul>
-<li>9.20-10.10 <b>Session V</b>: Aki Vehtari, Lorenzo Pacchiardi</li>
+<li>9.20-10.10 <b>Session V</b>: Aki Vehtari, Grégoire Clarté</li>
 <li>10.10-10.30 <b>Coffee</b></li>
 <li>10.30-11.45 <b>Session VI</b>: Riccardo Corradin, Tomasso Rigon, Judith Rousseau</li>
 <li>11.45-15.00 <b>Lunch & Ski</b></li>
-<li>15.00-16.15 <b>Session VII</b>: Grégoire Clarté, Florence Forbes, Ulpu Remes</li>
+<li>15.00-16.15 <b>Session VII</b>: Lorenzo Pacchiardi, Florence Forbes, Ulpu Remes</li>
 <li>16.45-18.00 <b>Session VIII</b>: Trevor Campbell, Sam Duffield, Joshua Bon</li>
 </ul>
 
@@ -254,9 +254,13 @@ In this talk we will comment how the setup must change depending on whether the 
 
 <li><b>Massimiliano Tamborrino</b>, University of Warwick, United Kingdom.<br><br>
 
-<i>Title</i>: TBA.<br><br>
+<i>Title</i>: Spectral density-based and measure-preserving guided sequential ABC for partially observed SDEs.<br><br>
 
-<i>Abstract</i>: TBA.
+<i>Abstract</i>: When applying ABC to stochastic models driven by stochastic differential equations (SDEs), the derivation of effective summary statistics and proper distances is particularly challenging, since simulations from the model under the same parameter configuration result in different output. Moreover, since exact simulation of SDEs is rarely possible, reliable numerical methods need to be applied. Here, we show the importance of adopting reliable property-preserving numerical schemes for the synthetic data generation, and the importance of constructing specific ABC summaries that are less sensitive to the intrinsic stochasticity of the model, being based on the underlying structural model properties. We embed them within the recently proposed guided sequential ABC approaches [1], testing them on the stochastic FitzHugh-Nagumo model (modelling single neuron dynamics), and on the broad class of partially observed Hamiltonian SDEs, in particular on the stochastic Jensen-and-Rit neural mass model, both with simulated and real electroencephalography (EEG) data, for both one neural population [2] and a network of populations. The latter is particularly challenging, as the problem is high-dimensional in both the parameter space (>15 parameters) and the SDE dimension (>20).<br>
+References:<br>
+[1] U. Picchini, M. Tamborrino. Guided sequential ABC schemes for intractable Bayesian models. ArXiv 2206.12235, 2022.<br>
+[2] E. Buckwar, M. Tamborrino, I. Tubikanec. Spectral density-based and measure-preserving ABC for partially observed diffusion processes. An illustration on Hamiltonian SDEs. Stat. Comput. 30 (3), 627-648, 2020.
+.
 <br><br></li>
 
 <li><b>Johanna Tamminen</b>, Finnish Meteorological Institute, Finland.<br><br>
@@ -275,9 +279,11 @@ In this talk we will comment how the setup must change depending on whether the 
 
 <li><b>Quan Vu</b>, University of Wollongong, Australia.<br><br>
 
-<i>Title</i>: TBA.<br><br>
+<i>Title</i>: Warped, Gradient-Enhanced Gaussian Process Surrogate Models for Exponential Families with Intractable Normalizing Constants.<br><br>
 
-<i>Abstract</i>: TBA.
+<i>Abstract</i>: Bayesian inference with many exponential-family models, such as the Potts model, is often challenging because of the intractable normalizing constants that appear in the likelihood functions. Markov chain Monte Carlo (MCMC) methods to deal with these types of models, such as the exchange algorithm, require simulations at every iteration of the Markov chain, thus rendering inference computationally expensive. Surrogate models for the likelihood, often using Gaussian processes, have been developed to make inference computationally tractable. In this talk, we propose the use of a warped, gradient-enhanced Gaussian process surrogate model for the sufficient statistics, which jointly models the sample means and variances of the sufficient statistics and which uses warping functions to capture covariance nonstationarity in the input parameter space. We show that both the consideration of nonstationarity and the inclusion of gradient information can be leveraged to obtain a surrogate model that is better, in a mean-squared error sense, than the stationary Gaussian process, particularly in regions where the likelihood function exhibits a phase transition. We show that the surrogate model can be used to improve the effective sample size per unit time when embedded in exact inferential algorithms, such as importance sampling and delayed-acceptance MCMC.<br>
+
+This is joint work with Andrew Zammit Mangion and Matt Moores at the University of Wollongong, Australia.
 <br><br></li>
 
 <li><b>Chaya Weerasinghe</b>, Monash University, Australia.<br><br>
