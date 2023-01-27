@@ -52,7 +52,7 @@ This <a href="https://bayescomp2023.com/">Bayes Comp 2023</a> Satellite Workshop
 Sunday 12 March
 <ul>
 <li>18.00-20.00 <b>Satellite ice-breaker</b></li>
-<li>20.00-21.10 <b>Satellite opening</b>: Keynote presentation by Sonia Petrone</li>
+<li>20.00-21.10 <b>Satellite opening</b>: Keynote presentation by Sonia Petrone on "Quasi-Bayes predictive algorithms"</li>
 </ul>
 
 Monday 13 March
@@ -212,9 +212,12 @@ In this talk we will comment how the setup must change depending on whether the 
 
 <li><b>Sonia Petrone</b>, Bocconi University, Italy.<br><br>
 
-<i>Title</i>: TBA.<br><br>
+<i>Title</i>: Quasi-Bayes predictive algorithms.<br><br>
 
-<i>Abstract</i>: TBA.
+<i>Abstract</i>: There is  an exciting renewed interest for predictive-based Bayesian learning, as a foundational concept as well in its methodological and computational implications. We present a methodology for providing Bayesian understanding, with the consequent quantification of uncertainty, of predictive algorithms - that is,  approximations of a computationally intractable Bayesian procedure that provide simpler and faster estimates of a distribution of interest. 
+Our point is that, in many cases, such an estimate can be interpreted as a predictive rule. This is the case for known and recently proposed recursive procedures for quasi-Bayesian learning with streaming data. 
+We show how one can use fundamental properties of the predictive distribution for exchangeable sequences, namely its martingale properties, to understand the underlying statistical model and prior law, and to provide a predictive-based Monte Carlo scheme to sample from the prior and the posterior distribution. We also give asymptotic Gaussian approximations of the posterior law that reveal how the uncertainty on the unknown distribution actually depends on the structure of the algorithm, i.e. of the  predictive rule, namely on its “efficiency” in incorporating information as new data becomes available.<br>
+This is joint work with Sandra Fortini.
 <br><br></li>
 
 <li><b>Ulpu Remes</b>, University of Helsinki, Finland.<br><br>
@@ -272,9 +275,11 @@ References:<br>
 
 <li><b>Aki Vehtari</b>, Aalto University, Finland.<br><br>
 
-<i>Title</i>: TBA.<br><br>
+<i>Title</i>: Efficient Bayesian inference when likelihood computation includes numerical algorithms with adjustable error tolerances.<br><br>
 
-<i>Abstract</i>: TBA.  
+<i>Abstract</i>: Statistical models can involve implicitly defined quantities, such as solutions to nonlinear ordinary differential equations (ODEs), that unavoidably need to be numerically approximated in order to evaluate the model. The approximation error inherently biases statistical inference results, but the amount of this bias is generally unknown and often ignored in Bayesian parameter inference. We propose a computationally efficient method for verifying the reliability of posterior inference for such models, when the inference is performed using Markov chain Monte Carlo methods. We validate the efficiency and reliability of our workflow in experiments using simulated and real data, and different ODE solvers.<br>
+
+Joint work with Juho Timonen, Nikolas Siccha, Ben Bales, and Harri Lähdesmäki.
 <br><br></li>
 
 <li><b>Quan Vu</b>, University of Wollongong, Australia.<br><br>
