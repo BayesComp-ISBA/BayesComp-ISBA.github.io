@@ -74,7 +74,7 @@ Tuesday 14 March
 <li>11.45-15.00 <b>Lunch & Ski</b></li>
 <li>15.00-16.15 <b>Session VII</b>: Lorenzo Pacchiardi, Florence Forbes, Ulpu Remes</li>
 <li>16.15-16.45 <b>Break</b></li>
-<li>16.45-18.00 <b>Session VIII</b>: Trevor Campbell, Sam Duffield, Joshua Bon</li>
+<li>16.45-18.15 <b>Session VIII</b>: Trevor Campbell, Sam Duffield, Joshua Bon, short talks by Ayush Bharti, Iuri Marocco and Hector McKimm</li>
 </ul>
 
 <h3> Registration and Practical Advice </h3>
@@ -104,7 +104,12 @@ Bayes Comp follows the <a href="">ISBA code of conduct</a> on ethical profession
 <i>Abstract</i>: Accuracy and efficiency of ABC hinge on the choice of suitable summary statistics and the proper tuning of the tolerance between simulated and observed statistics. Both problems have a thermodynamic interpretation, which has inspired efficient algorithms for their solution. In order for ABC to be accurate and efficient, summary statistics need to be near sufficient and well concentrated, respectively. That is to say, they need to encode nearly all parameter-related information while cancelling most of the noise of the model outputs. Thus, they can be interpreted as thermodynamic state variables, for stochastic models. I will present a Machine Learning approach that implements these requirements, and is able to find suitable statistics even in situations where parameter estimators are insufficient for Bayesian inference. If we interpret the distance between simulated and observed summary statistics as an energy, the tolerance can be interpreted as a temperature. This interpretation has inspired an adaptive tuning algorithm for the tolerance, which gradually lowers the temperature (akin to simulated annealing) such that the entropy production (wasted computation) is minimized.
 <br><br></li>
 
+<li><b>Ayush Bharti</b>, Aalto University, Finland. <br><br>
 
+<i>Title</i>: Approximate Bayesian Computation with Domain Expert in the Loop.<br><br>
+
+<i>Abstract</i>: Approximate Bayesian computation (ABC) is a popular likelihood-free inference method for models with intractable likelihood functions. As ABC methods usually rely on comparing summary statistics of observed and simulated data, the choice of the statistics is crucial. This choice involves a trade-off between loss of information and dimensionality reduction, and is often determined based on domain knowledge. However, handcrafting and selecting suitable statistics is a laborious task involving multiple trial-and-error steps. In this work, we introduce an active learning method for ABC statistics selection which reduces the domain expert's work considerably. By involving the experts, we are able to handle misspecified models, unlike the existing dimension reduction methods. Moreover, empirical results show better posterior estimates than with existing methods, when the simulation budget is limited.
+<br><br></li>
 
 <li><b>Imke Botha</b>, Queensland University of Technology, Australia. <br><br>
 
@@ -199,6 +204,22 @@ This is joint work with Hien Nguyen, TrungTin Nguyen and Julyan Arbel.
 <i>Title</i>: On the Stability of General Bayesian Inference.<br><br>
 
 <i>Abstract</i>: We study the stability of posterior predictive inferences to the specification of the likelihood model and perturbations of the data generating process. In modern big data analyses, the decision-maker may elicit useful broad structural judgements but a level of interpolation is required to arrive at a likelihood model. One model, often a computationally convenient canonical form, is chosen, when many alternatives would have been equally consistent with the elicited judgements. Equally, observational datasets often contain unforeseen heterogeneities and recording errors. Acknowledging such imprecisions, a faithful Bayesian analysis should be stable across reasonable equivalence classes for these inputs. We show that traditional Bayesian updating provides stability across a very strict class of likelihood models and DGPs, while a generalised Bayesian alternative using the beta-divergence loss function is shown to be stable across practical and interpretable neighbourhoods. These stability results provide a compelling justification for using generalised Bayes to facilitate inference under simplified canonical models. We illustrate this in linear regression, binary classification, and mixture modelling examples.
+<br><br></li>
+
+
+
+<li><b>Iuri Marocco</b>, Scuola Internazionale Superiore di Studi Avanzati, Trieste, Italy. <br><br>
+
+<i>Title</i>: Intrinsic dimension as summary statistics for ABC on unweighted networks.<br><br>
+
+<i>Abstract</i>: Real world-datasets characterized by discrete features are ubiquitous: from categorical surveys to clinical questionnaires, from unweighted networks to DNA sequences. Nevertheless, the most common unsupervised dimensional reduction methods are designed for continuous spaces, and their use for discrete spaces can lead to errors and biases. We developed an algorithm to infer the intrinsic dimension (ID) of datasets embedded in discrete spaces. Most importantly, our estimator allows to select the scale at which the ID is computed, thus providing an observable at different resolutions. We employ our method to find the ID of unweighted networks on both controlled and real-world examples. We then use the ID as a multi-scale summary statistics in order to infer, through ABC, the parameters of mechanistic generating models and perform model selection on real-world networks.
+<br><br></li>
+
+<li><b>Hector McKimm</b>, Imperial College London, United Kingdom. <br><br>
+
+<i>Title</i>: Bayesian modelling of Photon Pile-up in space-based Telescopes.<br><br>
+
+<i>Abstract</i>: Space-based telescopes contain devices designed to count the exact number of photons arriving from an astronomical source. Photon pile-up occurs when two or more photons arrive at the telescope's detector in the same time-window. In such instances, the sum of the photons' energies is recorded as the energy of a single photon. Failing to account for the effect of photon pile-up leads to inaccuracies in the analysis of the astronomical source. To model photon pile-up, alongside the variables of interest θ, we introduce auxiliary random variables { N_t } to represent the number of incident photons in each time-window. Once could compute on this model using a Metropolis-within-Gibbs sampler: alternating between updates of { N_t } and θ. However, since there may be thousands of time-windows in the data-set, there are thousands of auxiliary random variables and convergence of the Metropolis-within-Gibbs Markov chain would be prohibitively slow. Instead, one could try to compute directly on θ, using the marginal likelihood for θ, by analytically marginalizing out the variables { N_t }. However, the expression for this marginal likelihood involves an infinite sum, so its exact evaluation is not possibile. We propose an approximation of the exact model and use simulation experiments to assess the approximation's accuracy as well as to perform an initial analysis of the effect of photon pile-up. Future work will involve the analysis of data recorded by the Chandra telescope.
 <br><br></li>
 
 <li><b>Geoff Nicholls</b>, University of Oxford, United Kingdom.<br><br>
