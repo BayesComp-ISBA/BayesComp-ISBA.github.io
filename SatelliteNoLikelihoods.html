@@ -61,8 +61,8 @@ Monday 13 March
 <li>10.10-10.30 <b>Coffee</b></li>
 <li>10.30-12.10 <b>Session II</b>: David Frazier, Chris Holmes, Jack Jewson, Masahiro Fujisawa</li>
 <li>12.10-15.00 <b>Lunch & Ski</b></li>
-<li>15.00-16.40 <b>Session III</b>: Johanna Tamminen, Massimiliano Tamborrino, Yuexi Wang, Sebastian Schmön</li>
-<li>16.40-17.15 <b>Break</b></li>
+<li>15.30-16.45 <b>Session III</b>: Massimiliano Tamborrino, Yuexi Wang, Sebastian Schmön</li>
+<li>16.45-17.15 <b>Break</b></li>
 <li>17.15-18.30 <b>Session IV</b>: Imke Botha, Geoff Nicholls, Chaya Weerasinghe</li>
 </ul>
 
@@ -74,7 +74,7 @@ Tuesday 14 March
 <li>11.45-15.00 <b>Lunch & Ski</b></li>
 <li>15.00-16.15 <b>Session VII</b>: Lorenzo Pacchiardi, Ayush Bharti, Ulpu Remes</li>
 <li>16.15-16.45 <b>Break</b></li>
-<li>16.45-18.10 <b>Session VIII</b>: Trevor Campbell, Sam Duffield, Joshua Bon, short talks by Iuri Marocco and Hector McKimm</li>
+<li>16.45-18.05 <b>Session VIII</b>: Sam Duffield, Joshua Bon, short talks by Trevor Campbell, Iuri Marocco and Hector McKimm</li>
 </ul>
 
 <h3> Registration and Practical Advice </h3>
@@ -121,9 +121,9 @@ This is joint work with Chris Drovandi, Matthew Adams, Dan Tran and Frederick Be
 
 <li><b>Trevor Campbell</b>, University of British Columbia, Canada. <br><br>
 
-<i>Title</i>: Ergodic variational flows.<br><br>
+<i>Title</i>: Sparse Hamiltonian Flows (Bayesian Coresets Without all the Fuss).<br><br>
 
-<i>Abstract</i>: This work presents a new class of variational family -- ergodic variational flows -- that not only enables tractable i.i.d. sampling and density evaluation, but also comes with MCMC-like convergence guarantees. Ergodic variational flows consist of a mixture of repeated applications of a measure-preserving and ergodic map to an initial reference distribution. We provide mild conditions under which the variational distribution converges weakly and in total variation to the target as the number of steps in the flow increases; this convergence holds regardless of the value of variational parameters, although different parameter values may result in faster or slower convergence. Further, we develop a particular instantiation of the general family using Hamiltonian dynamics on a sparsified approximate log-likelihood function, combined with deterministic momentum refreshment. Simulated and real data experiments provide an empirical verification of the convergence theory and demonstrate that samples produced by the method are of comparable quality to a state-of-the-art MCMC method.
+<i>Abstract</i>: Bayesian inference provides a coherent approach to learning from data and uncertainty assessment in complex, expressive statistical models. However, inference algorithms have not yet caught up to the deluge of data in modern applications. One approach---Bayesian coresets---involves replacing the likelihood with an inexpensive approximation based on a small, weighted, representative subset of data. Although the methodology is sound in principle, efficiently constructing such a coreset in practice remains a significant challenge. Existing methods tend to be complicated to implement, slow, require a secondary inference step after coreset construction, and do not enable model selection. In this talk, I will introduce a new method---sparse Hamiltonian flows---that addresses all of these challenges. The method involves first subsampling the data uniformly, and then optimizing a Hamiltonian flow parametrized by coreset weights and including occasional momentum quasi-refreshment steps. I will present theoretical results demonstrating that the method enables an exponential compression of the dataset in representative models. Real and synthetic experiments demonstrate that sparse Hamiltonian flows provide significantly more accurate posterior approximations compared with competing coreset constructions.
 <br><br></li>
 
 <li><b>Grégoire Clarté</b>, University of Helsinki, Finland.<br><br>
@@ -273,13 +273,6 @@ References:<br>
 [1] U. Picchini, M. Tamborrino. Guided sequential ABC schemes for intractable Bayesian models. ArXiv 2206.12235, 2022.<br>
 [2] E. Buckwar, M. Tamborrino, I. Tubikanec. Spectral density-based and measure-preserving ABC for partially observed diffusion processes. An illustration on Hamiltonian SDEs. Stat. Comput. 30 (3), 627-648, 2020.
 .
-<br><br></li>
-
-<li><b>Johanna Tamminen</b>, Finnish Meteorological Institute, Finland.<br><br>
-
-<i>Title</i>: Uncertainty quantification in satellite remote sensing.<br><br>
-
-<i>Abstract</i>: Satellite remote sensing has become a crucial part of our environmental monitoring and climate research. In this presentation we discuss the needs, methods and applications of uncertainty quantification as part of the data processing of satellite remote sensing. Specifically, we discuss Bayesian approaches as well as the role of reference observations. In this presentation we highlight a few timely and societally relevant research topics related to carbon cycle, greenhouse gases and air quality. We discuss both present and upcoming satellite instruments and consider also emerging needs for uncertainty quantification.
 <br><br></li>
 
 <li><b>Aki Vehtari</b>, Aalto University, Finland.<br><br>
