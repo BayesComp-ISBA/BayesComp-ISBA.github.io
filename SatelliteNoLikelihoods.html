@@ -60,10 +60,8 @@ Monday 13 March
 <li>9.20-10.10 <b>Session I</b>: Carlo Albert, Yannik Schälte </li>
 <li>10.10-10.30 <b>Coffee</b></li>
 <li>10.30-12.10 <b>Session II</b>: David Frazier, Chris Holmes, Jack Jewson, Masahiro Fujisawa</li>
-<li>12.10-15.00 <b>Lunch & Ski</b></li>
-<li>15.30-16.45 <b>Session III</b>: Massimiliano Tamborrino, Yuexi Wang, Sebastian Schmön</li>
-<li>16.45-17.15 <b>Break</b></li>
-<li>17.15-18.30 <b>Session IV</b>: Imke Botha, Geoff Nicholls, Chaya Weerasinghe</li>
+<li>12.10-16.40 <b>Lunch & Ski</b></li>
+<li>16.40-18.20 <b>Session III</b>: Massimiliano Tamborrino, Yuexi Wang, Imke Botha, Chaya Weerasinghe</li>
 </ul>
 
 Tuesday 14 March
@@ -199,17 +197,6 @@ This is joint work with Chris Drovandi, Matthew Adams, Dan Tran and Frederick Be
 <i>Abstract</i>: Space-based telescopes contain devices designed to count the exact number of photons arriving from an astronomical source. Photon pile-up occurs when two or more photons arrive at the telescope's detector in the same time-window. In such instances, the sum of the photons' energies is recorded as the energy of a single photon. Failing to account for the effect of photon pile-up leads to inaccuracies in the analysis of the astronomical source. To model photon pile-up, alongside the variables of interest θ, we introduce auxiliary random variables { N_t } to represent the number of incident photons in each time-window. Once could compute on this model using a Metropolis-within-Gibbs sampler: alternating between updates of { N_t } and θ. However, since there may be thousands of time-windows in the data-set, there are thousands of auxiliary random variables and convergence of the Metropolis-within-Gibbs Markov chain would be prohibitively slow. Instead, one could try to compute directly on θ, using the marginal likelihood for θ, by analytically marginalizing out the variables { N_t }. However, the expression for this marginal likelihood involves an infinite sum, so its exact evaluation is not possibile. We propose an approximation of the exact model and use simulation experiments to assess the approximation's accuracy as well as to perform an initial analysis of the effect of photon pile-up. Future work will involve the analysis of data recorded by the Chandra telescope.
 <br><br></li>
 
-<li><b>Geoff Nicholls</b>, University of Oxford, United Kingdom.<br><br>
-
-<i>Title</i>: Semi Modular Inference: motivation and computation.<br><br>
-
-<i>Abstract</i>: Consider a parametric observation model for a data set $Y$ (with parameters $\theta$ and $\phi$) and another for data $Z$ (with parameter $\phi$). When the models have parameters in common (like $\phi$) we can bring the two modules $(Y,\theta,\phi)$ and $(Z,\phi)$ together to form a multi-modular model with posterior $\pi(\phi,\theta|Y,Z)$. In this belief update "everything informs everything else". However the more modules we combine in this way, the more likely it is that some of the observations models or priors are misspecified. <br><br>
-
-Suppose we know the $(Y,\theta,\phi)$ module is misspecified. Cut models are a form of Bayesian Multiple Imputation (BMI) proposed to treat misspecification. We ``impute'' $\phi$ using the good $(Z,\phi)$ module and then ``analyse'' $\theta$ given the imputed distribution of $\phi$. Each step is Bayesian, but the whole is not. Semi-Modular Inference (SMI) is similar, but uses a power posterior to down-weight, rather than cut, the influence of the $(Y,\theta,\phi)$ module on the imputation of $\phi$. SMI has a control parameter $\eta$, and defines a sequence of candidate belief updates interpolating between Cut models and Bayesian inference. <br><br>
-
-In this talk we will comment how the setup must change depending on whether the misspecification is in the prior or observation model. We will comment on how $\eta$ may be chosen, using the ELPD, and give some computational tools for approximating the family of SMI distributions indexed by $\eta$. Variational Inference with normalising flows is particularly convenient. We show how to fit the entire family using a single flow. The control parameter enters the flow through the conditioner and indexes a ``Variational Meta-Posterior'' (VMP). This gives the variational approximation at each $\eta$. It is rather like learning the variational parameters as functions of $\eta$. This VMP-framework allows to us choose $\eta$ maximising the ELPD in a single straight-through training procedure. This is needed for problems with multiple cuts, each with its own control parameter $\eta$.
-<br><br></li>
-
 <li><b>Lorenzo Pacchiardi</b>, University of Oxford, United Kingdom.<br><br>
 
 <i>Title</i>: Likelihood-Free Inference with Generative Neural Networks via Scoring Rule Minimization.<br><br>
@@ -255,13 +242,6 @@ This is a joint work with Chris Holmes and Andrew Yiu (University of Oxford).
 <i>Title</i>: Accounting for data informativeness in likelihood-free inference using machine learning models.<br><br>
 
 <i>Abstract</i>: Calibrating models on high-dimensional data can be challenging and inefficient when not all data points are equally informative of parameters, or e.g. only subject to background noise. This is especially relevant in likelihood-free inference methods, such as approximate Bayesian computation (ABC), which rely on the comparison of simulated and observed data via distance metrics, and are often the tool of choice to analyze complex spatial agent-based models. In this talk, we discuss how we can learn and use regression models to project data onto low-dimensional summary statistics or define weights accounting for informativeness. We demonstrate substantial improvements in robustness, efficiency, and accuracy over, as well as outline conceptual deficiencies of, established approaches.
-<br><br></li>
-
-<li><b>Sebastian Schmön</b>, University of Durham, United Kingdom.<br><br>
-
-<i>Title</i>: Bayesian inference for intractable simulators: opportunities and pitfalls in the era of machine learning.<br><br>
-
-<i>Abstract</i>: This is a journey through recent developments in so-called likelihood-free Bayesian inference. I will discuss how neural networks have revolutionised the field, their promises and pitfalls. We will see that there are considerable problems when models are mis-specified and discuss potential remedies using model criticism. Last but not least, we explore how a novel, more general approach to Bayesian inference allows us to incorporate inductive biases into the inference procedure directly.
 <br><br></li>
 
 <li><b>Massimiliano Tamborrino</b>, University of Warwick, United Kingdom.<br><br>
